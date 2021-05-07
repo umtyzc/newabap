@@ -1,0 +1,11 @@
+DATA: lt_sflight TYPE TABLE OF sflight.
+
+ CONSTANTS: lc_carrid TYPE s_carr_id VALUE 'UA',
+            lc_connid TYPE s_conn_id VALUE '941'.
+
+ SELECT carrid, connid, price, seatsocc_b, seatsocc_f,
+    ( ( seatsocc_b + seatsocc_f ) ) * price AS paymentsum
+    FROM sflight
+     WHERE carrid = @lc_carrid
+       AND connid = @lc_connid
+      INTO CORRESPONDING FIELDS of TABLE @lt_sflight.
