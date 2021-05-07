@@ -1,2 +1,2 @@
-# S/4 Hana Abap Development
+# S/4 Hana ABAP Development
 S/4HANA
