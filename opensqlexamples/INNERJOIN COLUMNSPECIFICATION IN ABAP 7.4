@@ -1,0 +1,6 @@
+SELECT scarr~carrname, spfli~*, scarr~url
+        FROM scarr INNER JOIN spfli ON scarr~carrid = spfli~carrid
+        INTO TABLE @DATA(result).
+        
+        
+        
