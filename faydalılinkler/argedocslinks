@@ -1,5 +1,135 @@
-https://wiki.scn.sap.com/wiki/display/Fiori/Extensibility#Extensibility-CustomFieldsandLogic
-
 Fiori Extensibility
-https://wiki.scn.sap.com/wiki/display/Fiori/Extensibility#
+
+ https://wiki.scn.sap.com/wiki/display/Fiori/Extensibility#
+
+Best Practice Guideline ABAP Development S4HANA
+
+ https://www.dsag.de/sites/default/files/2020-12/dsag_recommendation_abap_development.pdf
+
+ https://archive.sap.com/documents/docs/DOC-56285
+
+
+Tutorials:
+
+How we can use ‘READ_TEXT’ function for Fiori elements
+CDS view içerisinden ABAP class ı çağırma örneği(CAST)
+
+https://blogs.sap.com/2020/01/13/using-virtual-elements-with-cds-in-fiori-elements/
+
+
+Workflow ABAP Fiori
+
+https://www.youtube.com/watch?v=4mIvxWMYlGQ&ab_channel=AnubhavOberoy
+
+
+Inbox App Extension Example
+
+https://blogs.sap.com/2020/12/07/extending-sap-fiori-app-my-inbox-approve-purchase-requisitions-f0401a/
+
+
+Example: Custom CDS View using predefined Virtual Data Model and Extend View in S/4HANA
+
+https://blogs.sap.com/2018/08/22/sample-custom-cds-view-using-predefined-virtual-data-model-and-extend-view-in-s4hana/
+
+
+SAP Fiori Tutorial. Part 8 – How to Extend Standard Fiori App – both UI & OData?
+
+
+https://sapyard.com/sap-fiori-tutorial-part-8-how-to-extend-standard-fiori-app-both-ui-odata/
+
+https://fioriappslibrary.hana.ondemand.com/sap/fix/externalViewer/#/detail/Apps('F3074')/S14OP
+
+
+SAP Fiori For S4Hana
+
+https://wiki.scn.sap.com/wiki/display/Fiori/SAP+Fiori+for+S4HANA
+
+https://archive.sap.com/kmuuid2/80ec8772-9b7b-3110-6999-f0f326fedf00/Use%20Cases%20for%20Extending%20the%20UI%20of%20SAP%20Fiori%20Apps.pdf
+
+
+New Development S4HANA Theory:
+
+https://sapvideoa35699dc5.hana.ondemand.com/?entry_id=0_eq6ky48o
+
+https://wiki.scn.sap.com/wiki/display/Fiori/SAP+Fiori+for+S4HANA
+
+
+GÜZEL UYGULAMA FIORI ELEMENT
+
+https://events.sap.com/teched/en/session/48460
+
+
+import webide app to vscode fiori extenisons
+
+https://answers.sap.com/questions/13187948/importing-fiori-application-into-vscode.html
+
+
+SAP Fiori for SAP S/4HANA – Finding the Best Available App for your Use Case
+
+https://blogs.sap.com/2017/11/08/fiori-for-s4hana-finding-the-best-available-app-for-your-use-case/
+
+
+BRF+Plus
+
+1- https://sapyard.com/brfplus-for-sap-applications/
+
+2- https://www.sap.com/documents/2015/07/40daae80-527c-0010-82c7-eda71af511fa.html
+
+3- https://blogs.sap.com/2020/11/05/brf-settings-for-purchase-orders/
+
+4- https://s4hanablog.com/2018/07/17/how-can-brf-make-your-life-easy-and-whats-the-importance-in-s4hana/
+
+
+Developing SAP Fiori App using SAP Fiori Tools in Visual Studio (VS) Code
+
+https://blogs.sap.com/2020/07/16/developing-sap-fiori-app-using-sap-fiori-tools-in-visual-studio-code/
+
+
+BOPF CDS Example
+
+https://sapcodes.com/2020/07/17/fiori-element-cds-view-with-bopf-crud/
+
+
+ÖNEMLİ: Example: Custom CDS View using predefined Virtual Data Model and Extend View in S/4HANA
+
+https://blogs.sap.com/2018/08/22/sample-custom-cds-view-using-predefined-virtual-data-model-and-extend-view-in-s4hana/
+
+
+ÖNEMLİ: Fiori Elements Önemli Kaynaklar
+
+
+https://sapui5.hana.ondemand.com/#/topic/03265b0408e2432c9571d6b3feb6b1fd
+
+https://d.dam.sap.com/a/21EPJi8/SAP%20Fiori%20elements%20Usage%20Guide%20-%20August%202019.pdf
+
+https://www.youtube.com/playlist?list=PLo17W6sWsxWP4RMYXd7l824ss5KriAbwm
+
+
+Extensibility
+
+https://www.sap.com/documents/2020/03/ceeea71f-8a7d-0010-87a3-c30de2ffd8ff.html
+
+https://extensibilityexplorer.cfapps.eu10.hana.ondemand.com/ExtensibilityExplorer/
+
+
+BAPI Vs API
+
+https://api.sap.com/package/S4HANAOPAPI?section=Artifacts
+
+https://www.absoft.co.uk/enhancing-sap-apis-s4hana/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
