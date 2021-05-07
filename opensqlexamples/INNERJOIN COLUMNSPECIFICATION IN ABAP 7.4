@@ -1,6 +1,12 @@
+*As developers we (you) probably use Inner Joins frequently. In ABAP 7.4 we can utilize the ASTERISK in much the same way we can use it in a SELECT *. In the SELECT *list, you can now specify all columns of a data source using the new syntax data_source~* (see below:)
+
+
 SELECT scarr~carrname, spfli~*, scarr~url
         FROM scarr INNER JOIN spfli ON scarr~carrid = spfli~carrid
         INTO TABLE @DATA(result).
         
         
         
+*You can see that SPFLI has been added to the table RESULT. Please remember to address the data for SPFLI you would need to code as follows…
+
+*RESULT[n]-SPFLI-data_element
