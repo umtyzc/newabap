@@ -1,0 +1,31 @@
+DATA: ls_vbak TYPE vbak,
+      ld_vbeln LIKE vbak-vbeln.
+
+PARAMETERS: p_vbeln like vbak-vbeln.
+
+CONSTANTS: lc_name1(5) TYPE c VALUE 'name1',
+           lc_name2(5) TYPE c VALUE 'name2',
+           lc_name3(5) TYPE c VALUE 'name3'.
+
+ld_vbeln = p_vbeln.
+
+SELECT vbeln, vbtyp,
+ CASE
+   WHEN auart = 'ZAMA' THEN @lc_name1
+   WHEN auart = 'ZACR' THEN @lc_name2
+  ELSE @lc_name3
+END AS ernam
+FROM vbak
+WHERE vbeln = @ld_vbeln
+ INTO CORRESPONDING FIELDS of @ls_vbak.
+ENDSELECT.
+SELECT vbeln, vbtyp,
+ CASE
+   WHEN auart = 'ZAMA' THEN @lc_name1
+   WHEN auart = 'ZACR' THEN @lc_name2
+  ELSE @lc_name3
+END AS ernam
+FROM vbak
+WHERE vbeln = @ld_vbeln
+ INTO CORRESPONDING FIELDS of @ls_vbak.
+ENDSELECT.
