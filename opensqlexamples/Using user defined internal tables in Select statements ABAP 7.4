@@ -1,0 +1,8 @@
+SELECT MATNR, MTART, MEINS, MATKL
+  FROM MARA
+  INTO TABLE @DATA(IT_MARA)
+  WHERE MTART = 'FERT'.
+
+  LOOP AT it_MARA INTO DATA(WA_MARA).
+   WRITE:/ wa_mara-MATNR, wa_Mara-mtart, wa_mara-meins.
+  ENDLOOP.
