@@ -1,0 +1,17 @@
+@AbapCatalog.sqlViewName: 'DEMO_CDS_ASC_SPF'
+@AccessControl.authorizationCheck: #NOT_REQUIRED
+define view demo_cds_assoc_spfli 
+  as select from
+    spfli
+    association [1..*] to demo_cds_sflight as _sflight on
+          spfli.carrid = _sflight.carrid
+      and spfli.connid = _sflight.connid
+    association [1..1] to demo_cds_sairport as _sairport on
+      spfli.airpfrom = _sairport.id
+    {
+      _sflight,
+      _sairport,
+      key carrid,
+      key connid,
+      airpfrom
+    }
