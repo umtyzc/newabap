@@ -1,0 +1,30 @@
+CLASS zcl_tf_matdoc DEFINITION
+  PUBLIC
+  FINAL
+  CREATE PUBLIC .
+
+  PUBLIC SECTION.
+
+  INTERFACES if_amdp_marker_hdb.
+
+CLASS-METHODS get_material_del_docs for table FUNCTION ZCDS_TF_MATDOC.
+
+  PROTECTED SECTION.
+  PRIVATE SECTION.
+ENDCLASS.
+
+
+
+CLASS zcl_tf_matdoc IMPLEMENTATION.
+
+METHOD get_material_del_docs BY DATABASE FUNCTION FOR HDB LANGUAGE SQLSCRIPT
+OPTIONS READ-ONLY USING matdoc lips.
+
+return select a.mandt as client, a.mblnr as mblnr,
+a.mjahr as mjahr, a.ebelp as ebelp, b.vbeln as vbeln, b.posnr as posnr, b.vgpos as vgpos
+FROM matdoc as a INNER JOIN lips as b on CAST ( a.ebelp as ALPHANUM (6))  = b.vgpos AND a.mandt = :p_clnt;
+
+
+ENDMETHOD.
+
+ENDCLASS.
