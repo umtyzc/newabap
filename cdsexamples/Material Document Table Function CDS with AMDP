@@ -1,0 +1,22 @@
+"Normal CDS view da matdoc arasında istediğimiz alanları birbirine bağlarken data type conflict problemi ile karşılaştık. 
+"Bu yüzden DB katmanında yarattığımız bir AMDP classı kullanarak veri tiplerini manipule edip table function içerisinde kullanarak uygun bağlantıyı sağladık.
+
+
+
+@EndUserText.label: 'Material Document Table Function'
+define table function ZCDS_TF_MATDOC
+with parameters 
+@Environment.systemField: #CLIENT
+p_clnt : abap.clnt
+returns {
+  client : abap.clnt;
+  mblnr : mblnr;
+  mjahr : mblnr;
+  ebelp : mblnr;
+  vbeln : mblnr;
+  posnr : mblnr;
+  vgpos : mblnr;
+  
+  
+}
+implemented by method zcl_tf_matdoc=>get_material_del_docs;
