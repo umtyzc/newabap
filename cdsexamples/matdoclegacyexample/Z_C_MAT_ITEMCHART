@@ -1,0 +1,25 @@
+@AbapCatalog.sqlViewName: 'Z_C_ITEMCHART'
+@AbapCatalog.compiler.compareFilter: true
+@AbapCatalog.preserveKey: true
+@AccessControl.authorizationCheck: #CHECK
+@EndUserText.label: 'Material Documents Legacy ITEM Chart'
+@Metadata.allowExtensions: true
+
+
+@UI.chart: [{
+    title: 'Stock Price',
+    description: 'Stock Price by Location' ,
+    chartType: #COLUMN,
+    dimensions:  [ 'storage' ],
+    measures:  [ 'price' ]
+}]
+
+
+define view Z_C_MAT_ITEMCHART
+  as select from Z_C_MATDOC_CHART
+
+
+{
+  key storage,
+      price
+}
