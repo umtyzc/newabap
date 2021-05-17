@@ -1,0 +1,35 @@
+@AbapCatalog.sqlViewName: 'Z_S_MATDOC_ITEM'
+@AbapCatalog.compiler.compareFilter: true
+@AbapCatalog.preserveKey: true
+@AccessControl.authorizationCheck: #CHECK
+@EndUserText.label: 'Material Documents Legacy ITEM View'
+@VDM.viewType: #COMPOSITE
+
+define view Z_I_MATDOC_ITEM as select from nsdm_e_mseg as b
+association [1] to Z_I_MATDOC_LEGACY as _header  
+on $projection.mblnr = _header.mblnr and b.mjahr = _header.mjahr
+association [0..*] to Z_C_MATDOC_CHART  as _chart on $projection.lgort = _chart.storage
+
+
+{
+
+key mblnr,
+key mjahr,
+key zeile,
+werks,
+lgort,
+lifnr,
+kunnr,
+matnr,
+dmbtr,
+waers,
+menge,
+meins,
+aufnr,
+gjahr,
+@ObjectModel.association.type: [#TO_COMPOSITION_PARENT, #TO_COMPOSITION_ROOT]
+_header,
+_chart
+
+    
+}
