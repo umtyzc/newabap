@@ -1,0 +1,16 @@
+@AbapCatalog.sqlViewName: 'Z_I_MATDOC_SQL'
+@AbapCatalog.compiler.compareFilter: true
+@AbapCatalog.preserveKey: true
+@AccessControl.authorizationCheck: #CHECK
+@EndUserText.label: 'Material Documents Legacy ITEM Calculations'
+define view Z_I_MATDOC_ITEM_CALC as select from Z_I_MATDOC_ITEM 
+
+{
+ 
+  key mblnr,
+      sum(dmbtr) as TotalPrice
+        
+}
+group by
+  mblnr
+  
