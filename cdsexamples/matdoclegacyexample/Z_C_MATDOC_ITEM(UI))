@@ -1,0 +1,105 @@
+@Metadata.layer: #CUSTOMER
+annotate view Z_C_MATDOC_ITEM with
+{
+  @UI.facet: [
+         {
+           label: 'Material Doc Items',
+           id : 'GeneralItems',
+           purpose: #STANDARD,
+           type : #COLLECTION,
+           position: 10
+       },
+
+        { type: #FIELDGROUP_REFERENCE ,
+             label : 'Material Doc Items',
+             parentId: 'GeneralInfo',
+             id: 'idIdentification' ,
+             position: 10,
+             targetQualifier: 'mblnr' },
+
+
+         { type: #FIELDGROUP_REFERENCE ,
+             label : 'Created',
+             parentId: 'GeneralInfo',
+             id: 'idIdentification2' ,
+             position: 20,
+             targetQualifier: 'mjahr' },
+             
+                      {
+            label: 'Total Price For Storage Location',
+            id : 'StoreItemData',
+            type : #LINEITEM_REFERENCE,
+            targetElement: '_chart',
+            position: 20
+
+                },
+                
+            { id : 'idChart' ,
+               type: #CHART_REFERENCE ,
+               label : 'Chart',
+               targetElement: '_chart2',
+               position: 30 }
+             
+           
+       ]
+
+
+  @UI.identification: [{ position: 10, label:'Mat Doc ID',importance: #HIGH}]
+  @UI.selectionField: [{position: 10}]
+  @UI.lineItem: [{ importance: #HIGH,  position: 10, label :'Mat Doc ID'}]
+  @UI.hidden: false
+  mblnr;
+  @UI.fieldGroup: [{qualifier: 'mblnr', position: 20 }]
+  @UI.selectionField: [{position: 20}]
+  @UI.lineItem: [{position: 20, importance: #HIGH, label: 'Year' }]
+  @UI.identification: [{ position: 20, importance: #HIGH }]
+  mjahr;
+  @UI.fieldGroup: [{qualifier: 'mblnr', position: 30 }]
+  @UI.selectionField: [{position: 30}]
+  @UI.lineItem:[{position: 30, importance: #HIGH, label: 'Document Line ID'}]
+  @UI.identification: [{ position: 30, importance: #HIGH }]
+  zeile;
+  @UI.fieldGroup: [{qualifier: 'mblnr', position: 40 }]
+  @UI.selectionField: [{position: 40}]
+  @UI.lineItem:[{position: 40, importance: #HIGH, label: 'Organization'}]
+  @UI.identification: [{ position: 40, importance: #HIGH }]
+  werks;
+  @UI.fieldGroup: [{qualifier: 'mblnr', position: 50 }]
+  @UI.selectionField: [{position: 50}]
+  @UI.lineItem:[{position: 50, importance: #HIGH, label: 'Storage Location'}]
+  @UI.identification: [{ position: 50, importance: #HIGH }]
+  lgort;
+  @UI.fieldGroup: [{qualifier: 'mblnr', position: 60 }]
+  @UI.lineItem:[{position: 60, importance: #HIGH, label: 'Vendor'}]
+  @UI.identification: [{ position: 60, importance: #HIGH }]
+  lifnr;
+  @UI.fieldGroup: [{qualifier: 'mblnr', position: 70 }]
+  @UI.lineItem:[{position: 70, importance: #HIGH, label: 'Customer'}]
+  @UI.identification: [{ position: 70, importance: #HIGH }]
+  kunnr;
+  @UI.fieldGroup: [{qualifier: 'mblnr', position: 80 }]
+  @UI.lineItem:[{position: 80, importance: #HIGH, label: 'Local Price'}]
+  @UI.identification: [{ position: 80, importance: #HIGH }]
+  dmbtr;
+  @UI.fieldGroup: [{qualifier: 'mblnr', position: 90 }]
+  @UI.lineItem:[{position: 90, importance: #HIGH, label: 'Currency'}]
+  @UI.identification: [{ position: 90, importance: #HIGH }]
+  waers;
+  @UI.fieldGroup: [{qualifier: 'mblnr', position: 100 }]
+  @UI.lineItem:[{position: 100, importance: #HIGH, label: 'Currency'}]
+  @UI.identification: [{ position: 100, importance: #HIGH }]
+  menge;
+  @UI.fieldGroup: [{qualifier: 'mblnr', position: 110 }]
+  @UI.lineItem:[{position: 110, importance: #HIGH, label: 'Miktar'}]
+  @UI.identification: [{ position: 110, importance: #HIGH }]
+  meins;
+  @UI.fieldGroup: [{qualifier: 'mblnr', position: 120 }]
+  @UI.lineItem:[{position: 120, importance: #HIGH, label: 'Order No'}]
+  @UI.identification: [{ position: 120, importance: #HIGH }]
+  aufnr;
+  @UI.fieldGroup: [{qualifier: 'mblnr', position: 130 }]
+  @UI.lineItem:[{position: 130, importance: #HIGH, label: 'Year'}]
+  @UI.identification: [{ position: 130, importance: #HIGH }]
+  gjahr;
+
+}
