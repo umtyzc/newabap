@@ -1,0 +1,23 @@
+@AbapCatalog.sqlViewName: 'Z_MATDOC_CHART'
+@AbapCatalog.compiler.compareFilter: true
+@AbapCatalog.preserveKey: true
+@AccessControl.authorizationCheck: #CHECK
+@EndUserText.label: 'Material Documents Legacy ITEM Chart'
+@Metadata.allowExtensions: true
+
+
+
+
+define view Z_C_MATDOC_CHART as select from 
+
+     Z_I_MATDOC_ITEM 
+
+{
+    
+    key lgort as storage,
+    //lgort as storage,
+    sum(dmbtr) as price
+
+}
+    
+group by lgort
