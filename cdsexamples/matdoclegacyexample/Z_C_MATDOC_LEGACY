@@ -1,0 +1,40 @@
+@AbapCatalog.sqlViewName: 'Z_CS_MATDOC'
+@AbapCatalog.compiler.compareFilter: true
+@AbapCatalog.preserveKey: true
+@AccessControl.authorizationCheck: #CHECK
+@EndUserText.label: 'Material Documents Legacy Consumption View'
+@Metadata.allowExtensions: true
+@VDM.viewType: #CONSUMPTION
+
+
+@UI.headerInfo.description.label: 'Material Documents Legacy App'
+@UI.headerInfo.description.value: 'counter'
+@UI.headerInfo.typeName: 'Material Documents Legacy'
+@UI.headerInfo.typeNamePlural: 'Material Documents Legacy'
+@OData.publish: true
+@Search.searchable: true
+
+define root view Z_C_MATDOC_LEGACY
+  as select from Z_I_MATDOC_LEGACY as a
+
+  association [1..*] to Z_C_MATDOC_ITEM as _item on  $projection.mblnr = _item.mblnr
+                                                 and a.mjahr           = _item.mjahr
+  association [1..1] to Z_I_MATDOC_ITEM_CALC as _sum on $projection.mblnr = _sum.mblnr   
+  
+  
+  
+  
+{
+      @EndUserText.label: 'Material Document ID'
+      @Search.defaultSearchElement: true
+  key mblnr,
+  key mjahr,
+      @Consumption.valueHelp: 'Z_I_MATDOC_LEGACY.BLART'
+      blart,
+      budat,
+      xblnr,
+      _sum.TotalPrice,
+      /* Associations */
+      _item
+      //_chart
+}
